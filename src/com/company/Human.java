@@ -5,4 +5,5 @@ public class Human {
     public String lastName;
     public String phone;
     protected Animal pet;
+    protected Car auto;
 }
