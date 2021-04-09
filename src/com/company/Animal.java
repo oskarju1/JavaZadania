@@ -47,4 +47,14 @@ public class Animal {
             System.out.println(species + " Lost 1kg of weight");
         }
     }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "species='" + species + '\'' +
+                ", weight=" + weight +
+                ", name='" + name + '\'' +
+                ", pic=" + pic +
+                '}';
+    }
 }

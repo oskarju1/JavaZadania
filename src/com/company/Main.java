@@ -1,5 +1,7 @@
 package com.company;
 
+import devices.Car;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -19,8 +21,12 @@ public class Main {
         me.auto = new Car("VW", "Golf", "silver", 10000.00);
         me.setCar(me.auto);
         System.out.println(me.getCar());
-
+        Car auto1 = new Car("Audi", "A3", "blue", 29201.00);
+        Car auto2 = new Car("Audi", "A3", "blue", 29201.00);
+        System.out.println(auto1);
+        System.out.println(auto2);
         me.getSalary();
         me.setSalary(2313.00);
+
     }
 }
