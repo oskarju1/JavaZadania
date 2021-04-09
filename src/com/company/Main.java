@@ -16,7 +16,10 @@ public class Main {
         me.firstName = "Oskar";
         me.lastName = "Jurgielaniec";
         me.pet = dog;
-        me.auto = new Car("VW", "Golf");
+        me.auto = new Car("VW", "Golf", "silver", 10000.00);
+        me.setCar(me.auto);
+        System.out.println(me.getCar());
+
         me.getSalary();
         me.setSalary(2313.00);
     }

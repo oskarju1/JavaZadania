@@ -28,8 +28,27 @@ public class Human {
             System.out.println("Nalezy koniecznie odebrać aneks do umowy od Pani Hani z kadr");
             System.out.println("ZUS i US już o tobie wiedzą nie ukrywaj dochodu");
             this.salary = salary;
-        } else {
+        }
+        else {
             System.out.println("Nie mozna przypisac ujemnej wartosci wynagrodzenia");
+        }
+    }
+
+    public Car getCar() {
+        return auto;
+    }
+
+    public void setCar(Car auto) {
+        if (salary > auto.value) {
+            this.auto = auto;
+            System.out.println("Samochód zakupiony");
+        }
+        else if (salary > (auto.value) / 12) {
+            this.auto = auto;
+            System.out.println("Kupiłeś samochód na raty");
+        }
+        else {
+            System.out.println("Idź na studia czy coś");
         }
     }
 }
