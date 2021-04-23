@@ -1,7 +1,7 @@
 package com.company;
-import devices.Car;
+import com.company.devices.Car;
 
-public class Human {
+public class Human extends Animal{
     public String firstName;
     public String lastName;
     public String phone;
@@ -10,6 +10,7 @@ public class Human {
     private Double salary;
 
     public Human(String firstName, String lastName, String phone) {
+        super("homosapiens");
         this.firstName = firstName;
         this.lastName = lastName;
         this.phone = phone;
