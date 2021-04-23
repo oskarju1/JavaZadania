@@ -9,6 +9,10 @@ public class Car extends Device {
         this.color = color;
         this.value = value;
     }
+
+    public void turnOn(){
+        System.out.println("wlacz silnik");
+    }
 }
 
 

@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.devices.Device;
 import com.company.devices.Phone;
 
 public class Main {

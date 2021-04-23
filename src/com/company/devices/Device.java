@@ -1,6 +1,6 @@
 package com.company.devices;
 
-public class Device {
+public abstract class Device {
     public final String model;
     public final String producer;
     public final Integer yearofproduction;
@@ -11,6 +11,8 @@ public class Device {
         this.yearofproduction = yearofproduction;
     }
 
+    abstract public void turnOn();
+
     @Override
     public String toString() {
         return "Device{" +
@@ -18,9 +20,5 @@ public class Device {
                 ", model='" + model + '\'' +
                 ", yearofproduction=" + yearofproduction +
                 '}';
-    }
-
-    public void turnOn() {
-        System.out.println("Włączono urządzenie");
     }
 }
