@@ -4,7 +4,7 @@ import java.io.File;
 
 public class Animal {
     final public String species;
-    private Double weight;
+    public Double weight;
     public String name;
     public File pic;
 
@@ -16,19 +16,11 @@ public class Animal {
     public Animal(String species){
         this.species = species;
 
-        switch(this.species){
-            case "dog":
-                this.weight = DEFAULT_DOG_WEIGHT;
-                break;
-            case "cat":
-                this.weight = DEFAULT_CAT_WEIGHT;
-                break;
-            case "cow":
-                this.weight = DEFAULT_COW_WEIGHT;
-                break;
-            default:
-                this.weight = DEFAULT_ANIMAL_WEIGHT;
-                break;
+        switch (this.species) {
+            case "dog" -> this.weight = DEFAULT_DOG_WEIGHT;
+            case "cat" -> this.weight = DEFAULT_CAT_WEIGHT;
+            case "cow" -> this.weight = DEFAULT_COW_WEIGHT;
+            default -> this.weight = DEFAULT_ANIMAL_WEIGHT;
         }
     }
 
@@ -56,5 +48,21 @@ public class Animal {
                 ", name='" + name + '\'' +
                 ", pic=" + pic +
                 '}';
+    }
+
+    public void sell(Human seller, Human buyer, Double price){
+        if(seller.pet != this){
+            System.out.println("Nie mozesz sprzedac czegos czego nie posiadasz");
+        }
+        else if(buyer.cash < price){
+            System.out.println("Nie stac cie");
+        }
+        else{
+            seller.cash += price;
+            buyer.cash -= price;
+            buyer.pet = seller.pet;
+            seller.pet = null;
+            System.out.println("Transakcja udana sprzedano" + this + "za" + price);
+        }
     }
 }

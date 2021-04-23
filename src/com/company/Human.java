@@ -1,56 +1,19 @@
 package com.company;
+import com.company.devices.Phone;
 import com.company.devices.Car;
 
-public class Human extends Animal{
+public class Human extends Animal implements Washable, Comparable<Human>{
     public String firstName;
     public String lastName;
-    public String phone;
+    public Phone phone;
+    public Car auto;
     protected Animal pet;
-    protected Car auto;
-    private Double salary;
+    public Double cash;
 
-    public Human(String firstName, String lastName, String phone) {
-        super("homosapiens");
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.phone = phone;
-        this.salary = 23892183.00;
-    }
+    static final public String SPECIES = "homo sapiens";
 
-    public Double getSalary() {
-        System.out.println(java.time.LocalDate.now());
-        System.out.println(this.salary);
-        return salary;
-    }
-
-    public void setSalary(double salary) {
-        if (salary > 0) {
-            System.out.println("Dane zostały wysłane do systemu księgowego");
-            System.out.println("Nalezy koniecznie odebrać aneks do umowy od Pani Hani z kadr");
-            System.out.println("ZUS i US już o tobie wiedzą nie ukrywaj dochodu");
-            this.salary = salary;
-        }
-        else {
-            System.out.println("Nie mozna przypisac ujemnej wartosci wynagrodzenia");
-        }
-    }
-
-    public Car getCar() {
-        return auto;
-    }
-
-    public void setCar(Car auto) {
-        if (salary > auto.value) {
-            this.auto = auto;
-            System.out.println("Samochód zakupiony");
-        }
-        else if (salary > (auto.value) / 12) {
-            this.auto = auto;
-            System.out.println("Kupiłeś samochód na raty");
-        }
-        else {
-            System.out.println("Idź na studia czy coś");
-        }
+    public Human() {
+        super(SPECIES);
     }
 
     @Override
@@ -61,7 +24,23 @@ public class Human extends Animal{
                 ", phone='" + phone + '\'' +
                 ", pet=" + pet +
                 ", auto=" + auto +
-                ", salary=" + salary +
+                ", cash=" + cash +
                 '}';
+    }
+
+    public void wash() {
+        System.out.println("myju myju");
+    }
+
+    public void dry() {
+        System.out.println("shuuuuuuuuu");
+    }
+
+    public void sell(Human me, Human brother, Double price) {
+
+    }
+
+    public int compareTo(Human otherHuman) {
+        return (int)  (this.weight - otherHuman.weight);
     }
 }
