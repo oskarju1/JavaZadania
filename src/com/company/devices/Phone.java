@@ -2,9 +2,16 @@ package com.company.devices;
 
 import com.company.Human;
 
+
+
+
 public class Phone extends Device {
     final public Double screenSize;
     final public String operationSystem;
+    public String appName;
+    public Double appVersion;
+    public String serverAddress;
+    public String[] applist;
 
     public Phone(String producer, String model, Integer yearofproduction, Double screenSize, String operationSystem) {
         super(producer, model, yearofproduction);
@@ -31,4 +38,24 @@ public class Phone extends Device {
             System.out.println("Transakcja udana sprzedano" + this + "za" + price);
         }
     }
+
+    public void installAnApp(String appName){
+        this.appName = appName;
+    }
+
+    public void installAnApp(String appName, Double appVersion){
+        this.appName = appName;
+        this.appVersion = appVersion;
+    }
+
+    public void installAnApp(String appName, Double appVersion, String serverAddress){
+        this.appName = appName;
+        this.appVersion = appVersion;
+        this.serverAddress = serverAddress;
+    }
+
+    public void installAnApp(String[] applist){
+        this.applist = applist;
+    }
+
 }

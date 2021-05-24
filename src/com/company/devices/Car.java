@@ -2,7 +2,7 @@ package com.company.devices;
 
 import com.company.Human;
 
-public class Car extends Device {
+public abstract class Car extends Device {
     public String color;
     public Double value;
 
@@ -15,6 +15,7 @@ public class Car extends Device {
     public void turnOn(){
         System.out.println("wlacz silnik");
     }
+    public abstract void refuel();
 
     public void sell(Human seller, Human buyer, Double price){
         if(seller.auto != this){
@@ -31,6 +32,8 @@ public class Car extends Device {
             System.out.println("Transakcja udana sprzedano: " + this + "za " + price);
         }
     }
+
+
 }
 
 
