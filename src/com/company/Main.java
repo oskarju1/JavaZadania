@@ -1,9 +1,8 @@
 package com.company;
 
-import com.company.devices.Device;
+import com.company.creatures.Animal;
+import com.company.creatures.Pet;
 import com.company.devices.Phone;
-
-import java.util.Arrays;
 
 public class Main {
 
@@ -13,7 +12,7 @@ public class Main {
         System.out.println(iphone.model);
 
         Human me = new Human();
-        me.pet = new Animal("dog");
+        me.pet = new Pet("dog");
         me.cash = 0.0;
         Human brother = new Human();
         brother.cash = 1000.0;

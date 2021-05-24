@@ -1,4 +1,6 @@
 package com.company;
+import com.company.creatures.Animal;
+import com.company.creatures.Pet;
 import com.company.devices.Phone;
 import com.company.devices.Car;
 
@@ -7,7 +9,7 @@ public class Human extends Animal implements Washable, Comparable<Human>{
     public String lastName;
     public Phone phone;
     public Car auto;
-    protected Animal pet;
+    public Pet pet;
     public Double cash;
 
     static final public String SPECIES = "homo sapiens";

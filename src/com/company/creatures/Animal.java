@@ -1,8 +1,10 @@
-package com.company;
+package com.company.creatures;
+
+import com.company.Human;
 
 import java.io.File;
 
-public class Animal {
+public abstract class Animal {
     final public String species;
     public Double weight;
     public String name;
@@ -24,13 +26,13 @@ public class Animal {
         }
     }
 
-    void feed() {
+    public void feed() {
         if (weight > 0) {
             weight += 1;
             System.out.println("Thx for food");
         }
     }
-    void walk(){
+    public void walk(){
         if(this.weight <= 0) {
             System.out.println("You cannot walk the town with dead animal!!!");
         }
