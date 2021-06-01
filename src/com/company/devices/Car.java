@@ -18,19 +18,7 @@ public abstract class Car extends Device {
     public abstract void refuel();
 
     public void sell(Human seller, Human buyer, Double price){
-        if(seller.auto != this){
-            System.out.println("Nie mozesz sprzedac czegos czego nie posiadasz");
-        }
-        else if(buyer.cash < price){
-            System.out.println("Nie stac cie");
-        }
-        else{
-            seller.cash += price;
-            buyer.cash -= price;
-            buyer.auto = seller.auto;
-            seller.auto = null;
-            System.out.println("Transakcja udana sprzedano: " + this + "za " + price);
-        }
+        System.out.println("Nie mozesz sprzedac czegos czego nie posiadasz");
     }
 
 

@@ -9,6 +9,7 @@ public abstract class Device {
         this.model = model;
         this.producer = producer;
         this.yearofproduction = yearofproduction;
+        double value;
     }
 
     abstract public void turnOn();
