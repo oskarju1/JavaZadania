@@ -27,8 +27,8 @@ public class Human extends Animal implements Washable, Comparable<Human>{
 
     public double getGarageValue() {
         double value = 0;
-        for (int i = 0; i < garage.length; i++) {
-            value += garage[i].value;
+        for (Car car : garage) {
+            value += car.value;
         }
         return value;
     }
@@ -47,19 +47,21 @@ public class Human extends Animal implements Washable, Comparable<Human>{
                 '}';
     }
 
-    public void wash() {
-        System.out.println("myju myju");
-    }
-
-    public void dry() {
-        System.out.println("shuuuuuuuuu");
-    }
-
     public void sell(Human me, Human brother, Double price) {
 
     }
 
     public int compareTo(Human otherHuman) {
         return (int)  (this.weight - otherHuman.weight);
+    }
+
+    @Override
+    public void wash() {
+
+    }
+
+    @Override
+    public void dry() {
+
     }
 }

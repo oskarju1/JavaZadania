@@ -40,7 +40,5 @@ public class Main {
 
         me.pet.sell(me, brother, 300.0);
 
-
-
     }
 }

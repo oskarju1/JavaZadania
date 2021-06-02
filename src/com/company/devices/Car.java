@@ -2,6 +2,8 @@ package com.company.devices;
 
 import com.company.Human;
 
+import java.util.ArrayList;
+
 public abstract class Car extends Device {
     public String color;
     public Double value;
@@ -12,16 +14,34 @@ public abstract class Car extends Device {
         this.value = value;
     }
 
+
     public void turnOn(){
         System.out.println("wlacz silnik");
     }
     public abstract void refuel();
 
-    public void sell(Human seller, Human buyer, Double price){
-        System.out.println("Nie mozesz sprzedac czegos czego nie posiadasz");
+    public ArrayList<Human> Owners = new ArrayList<>();
+
+    public Human getCurrentOwner() {
+        if (Owners.isEmpty())
+            return null;
+        else
+            return Owners.get(Owners.size() - 1);
     }
 
+    public void addOwner(Human human) {
+        Owners.add(human);
+    }
+
+    public boolean wasOwner(Human human) {
+        return Owners.contains(human);
+    }
+
+    public int transactionID() {
+        return Owners.size();
+    }
+
+    public boolean isCarSold(Human buyer, Human seller){ return Owners.lastIndexOf(seller) == Owners.lastIndexOf(buyer); }
 
 }
-
 
