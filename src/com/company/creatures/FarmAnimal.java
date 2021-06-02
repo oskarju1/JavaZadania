@@ -5,6 +5,16 @@ public class FarmAnimal extends Animal implements Edible {
         super(species);
     }
 
+    @Override
+    public void pay(Double price) {
+
+    }
+
+    @Override
+    public Double getCash() {
+        return null;
+    }
+
     public void beEaten() {
 
     }

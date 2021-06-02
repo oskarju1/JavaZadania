@@ -51,6 +51,16 @@ public class Human extends Animal implements Washable, Comparable<Human>{
 
     }
 
+    @Override
+    public void pay(Double price) {
+
+    }
+
+    @Override
+    public Double getCash() {
+        return cash;
+    }
+
     public int compareTo(Human otherHuman) {
         return (int)  (this.weight - otherHuman.weight);
     }

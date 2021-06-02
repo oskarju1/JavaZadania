@@ -67,4 +67,8 @@ public abstract class Animal {
             System.out.println("Transakcja udana sprzedano" + this + "za" + price);
         }
     }
+
+    public abstract void pay(Double price);
+
+    public abstract Double getCash();
 }
